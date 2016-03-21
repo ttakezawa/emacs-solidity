@@ -391,9 +391,9 @@ Highlight the 1st result."
     :error-patterns
     ((error line-start (file-name) ":" line ":" column ":"
             (or " Error" " Parser error" " Type error" " Declaration error") ":" (message) line-end)
-     ;; warning and info not used at the moment. Just leaving them here for reference
      (warning line-start (file-name) ":" line ":" column ":"
-              (or "W" "R") ":" (message) line-end)
+              " Warning:" (message) line-end)
+     ;; info not used at the moment. Just leaving them here for reference
      (info line-start (file-name) ":" line ":" column ":"
            "C:" (message) line-end))
     :modes solidity-mode
